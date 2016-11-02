@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data class="MainActivityBinding">
+
+        <import type="com.huihui.databingding.User" />
+
+        <import type="com.huihui.databingding.Person" />
+
+        <import type="java.util.ArrayList" />
+
+        <import type="com.huihui.databingding.MainActivity" />
+
+        <import type="java.util.HashMap" />
+
+        <variable
+            name="OnClick"
+            type="MainActivity" />
+
+        <variable
+            name="user"
+            type="User" />
+
+        <variable
+            name="person"
+            type="Person" />
+
+        <variable
+            name="str"
+            type="String" />
+
+        <variable
+            name="list"
+            type="ArrayList&lt;String>" />
+
+        <variable
+            name="map"
+            type="HashMap&lt;String, String>" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.userName}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{user.city}" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{String.valueOf(user.time)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{String.valueOf(person.age)}" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="ceshi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{str}"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{list[0]}" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{map["name"]}' />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{OnClick.onClick}"
+            android:text="登录" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{OnClick.onClick}"
+            android:text="注册" />
+
+        <Button
+            android:id="@+id/btn_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{OnClick.onClick}"
+            android:text="年龄+" />
+
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.huihui.databingding.BlankFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</layout>
